@@ -1,44 +1,3 @@
-
-<?php
-
-$blogs = [
-
-    [
-        "image" => "images/logo1.png",
-        "date" => "october 31, 2026",
-        "title" => "Your Brand Is More Than a Logo",
-        "description" => "A brand is more than a logo. It's your identity, your story, and the impression you leave on every customer.",
-        "link" => "https://artologyplusbranding.blogspot.com/2026/10/your-brand-is-more-than-logo.html"
-    ],
-
-    [
-        "image" => "images/powerful.png",
-        "date" => "November 01, 2026",
-        "title" => "The Psychology Behind Powerful Design",
-        "description" => "Discover how colors, shapes, and visual elements influence emotions, shape perceptions, and make designs more memorable.",
-        "link" => "https://artologyplusbranding.blogspot.com/2026/10/the-psychology-behind-powerful-design.html"
-    ],
-
-    [
-        "image" => "images/workspace.png",
-        "date" => "November 02, 2026",
-        "title" => "How Branding Helps Your Business Stand Out",
-        "description" => "Discover how strong branding helps your business stand out, build customer trust, and create a memorable identity in a competitive market.",
-        "link" => "https://artologyplusbranding.blogspot.com/2026/11/how-branding-helps-your-business-stand.html"
-    ],
-
-    [
-        "image" => "images/dusk.png",
-        "date" => "November 02, 2026",
-        "title" => "The Power of a Unique Brand Identity",
-        "description" => "Explore how a unique brand identity helps your business stand out, create a lasting impression, and connect with the right audience through powerful and consistent branding.",
-        "link" => "https://artologyplusbranding.blogspot.com/2026/11/the-power-of-unique-brand-identity.html"
-    ]
-
-];
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -276,73 +235,165 @@ $blogs = [
 
             <div class="blog-grid">
 
-                <?php foreach ($blogs as $blog): ?>
+                <!-- BLOG 1 -->
 
-                    <div class="blog-card">
+                <div class="blog-card">
 
-                        <!-- IMAGE -->
+                    <div class="blog-image">
+                        <img
+                            src="images/logo1.png"
+                            alt="Your Brand Is More Than a Logo"
+                        >
+                    </div>
 
-                        <div class="blog-image">
+                    <div class="blog-content">
 
-                            <img
-                                src="<?php echo htmlspecialchars($blog['image']); ?>"
-                                alt="<?php echo htmlspecialchars($blog['title']); ?>"
-                            >
-
+                        <div class="blog-date">
+                            <i class="fa-regular fa-calendar"></i>
+                            october 31, 2026
                         </div>
 
-                        <!-- CONTENT -->
-
-                        <div class="blog-content">
-
-                            <!-- DATE -->
-
-                            <div class="blog-date">
-
-                                <i class="fa-regular fa-calendar"></i>
-
-                                <?php echo htmlspecialchars($blog['date']); ?>
-
-                            </div>
-
-                            <!-- TITLE -->
-
-                            <h3 class="blog-title">
-
-                                <a href="<?php echo htmlspecialchars($blog['link']); ?>">
-
-                                    <?php echo htmlspecialchars($blog['title']); ?>
-
-                                </a>
-
-                            </h3>
-
-                            <!-- DESCRIPTION -->
-
-                            <p class="blog-description">
-
-                                <?php echo htmlspecialchars($blog['description']); ?>
-
-                            </p>
-
-                            <!-- READ MORE -->
-
-                            <a
-                                class="read-more"
-                                href="<?php echo htmlspecialchars($blog['link']); ?>"
-                            >
-
-                                Read More
-
-                                <i class="fa-solid fa-arrow-right"></i>
-
+                        <h3 class="blog-title">
+                            <a href="https://artologyplusbranding.blogspot.com/2026/10/your-brand-is-more-than-logo.html">
+                                Your Brand Is More Than a Logo
                             </a>
+                        </h3>
 
-                        </div>
+                        <p class="blog-description">
+                            A brand is more than a logo. It's your identity, your story, and the impression you leave on every customer.
+                        </p>
+
+                        <a
+                            class="read-more"
+                            href="https://artologyplusbranding.blogspot.com/2026/10/your-brand-is-more-than-logo.html"
+                        >
+                            Read More
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
 
                     </div>
 
-                <?php endforeach; ?>
+                </div>
+
+                <!-- BLOG 2 -->
+
+                <div class="blog-card">
+
+                    <div class="blog-image">
+                        <img
+                            src="images/powerful.png"
+                            alt="The Psychology Behind Powerful Design"
+                        >
+                    </div>
+
+                    <div class="blog-content">
+
+                        <div class="blog-date">
+                            <i class="fa-regular fa-calendar"></i>
+                            November 01, 2026
+                        </div>
+
+                        <h3 class="blog-title">
+                            <a href="https://artologyplusbranding.blogspot.com/2026/10/the-psychology-behind-powerful-design.html">
+                                The Psychology Behind Powerful Design
+                            </a>
+                        </h3>
+
+                        <p class="blog-description">
+                            Discover how colors, shapes, and visual elements influence emotions, shape perceptions, and make designs more memorable.
+                        </p>
+
+                        <a
+                            class="read-more"
+                            href="https://artologyplusbranding.blogspot.com/2026/10/the-psychology-behind-powerful-design.html"
+                        >
+                            Read More
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- BLOG 3 -->
+
+                <div class="blog-card">
+
+                    <div class="blog-image">
+                        <img
+                            src="images/workspace.png"
+                            alt="How Branding Helps Your Business Stand Out"
+                        >
+                    </div>
+
+                    <div class="blog-content">
+
+                        <div class="blog-date">
+                            <i class="fa-regular fa-calendar"></i>
+                            November 02, 2026
+                        </div>
+
+                        <h3 class="blog-title">
+                            <a href="https://artologyplusbranding.blogspot.com/2026/11/how-branding-helps-your-business-stand.html">
+                                How Branding Helps Your Business Stand Out
+                            </a>
+                        </h3>
+
+                        <p class="blog-description">
+                            Discover how strong branding helps your business stand out, build customer trust, and create a memorable identity in a competitive market.
+                        </p>
+
+                        <a
+                            class="read-more"
+                            href="https://artologyplusbranding.blogspot.com/2026/11/how-branding-helps-your-business-stand.html"
+                        >
+                            Read More
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- BLOG 4 -->
+
+                <div class="blog-card">
+
+                    <div class="blog-image">
+                        <img
+                            src="images/dusk.png"
+                            alt="The Power of a Unique Brand Identity"
+                        >
+                    </div>
+
+                    <div class="blog-content">
+
+                        <div class="blog-date">
+                            <i class="fa-regular fa-calendar"></i>
+                            November 02, 2026
+                        </div>
+
+                        <h3 class="blog-title">
+                            <a href="https://artologyplusbranding.blogspot.com/2026/11/the-power-of-unique-brand-identity.html">
+                                The Power of a Unique Brand Identity
+                            </a>
+                        </h3>
+
+                        <p class="blog-description">
+                            Explore how a unique brand identity helps your business stand out, create a lasting impression, and connect with the right audience through powerful and consistent branding.
+                        </p>
+
+                        <a
+                            class="read-more"
+                            href="https://artologyplusbranding.blogspot.com/2026/11/the-power-of-unique-brand-identity.html"
+                        >
+                            Read More
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
 
             </div>
 
