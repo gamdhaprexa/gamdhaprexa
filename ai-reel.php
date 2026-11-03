@@ -1,8 +1,3 @@
-
-<?php
-// ArtologyPlus Branding Reels
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
