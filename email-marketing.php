@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,7 +59,7 @@
 
 <div class="content">
 
-    <a href="index.php">← Back to Portfolio</a>
+    <a href="index.html">← Back to Portfolio</a>
 
     <br><br>
 
