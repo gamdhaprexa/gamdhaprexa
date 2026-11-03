@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -107,7 +106,7 @@
 
 <section class="project-page">
 
-    <a href="index.php" class="back-link">
+    <a href="index.html" class="back-link">
         ← Back to Portfolio
     </a>
 
@@ -131,7 +130,7 @@
                 engaging scripts, and innovative video concepts.
             </p>
 
-            <a href="ai-reel.php" class="project-link">
+            <a href="ai-reel.html" class="project-link">
                 View Project →
             </a>
 
@@ -149,7 +148,7 @@
                 connect with audiences, and improve engagement.
             </p>
 
-            <a href="organic-reel.php" class="project-link">
+            <a href="organic-reel.html" class="project-link">
                 View Project →
             </a>
 
