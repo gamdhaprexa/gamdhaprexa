@@ -1,11 +1,20 @@
+
+<?php
+// ArtologyPlus Branding Reels
+?>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Reels & Organic | Prexa Gamdha</title>
+
+    <title>Branding Reels | ArtologyPlus</title>
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -14,149 +23,214 @@
 
         body {
             font-family: Arial, sans-serif;
-            background: #f8f9fc;
+            background: #ffffff;
             color: #111820;
         }
 
-        .project-page {
+        /* MAIN SECTION */
+
+        .reels-section {
             padding: 70px 8%;
+            min-height: 100vh;
+            background: #ffffff;
         }
 
-        .back-link {
-            color: #174a91;
-            text-decoration: none;
-            font-weight: 600;
-        }
+        /* HEADING */
 
-        .project-page h1 {
+        .reels-heading {
             text-align: center;
-            font-size: 36px;
-            margin: 25px 0 12px;
+            margin-bottom: 50px;
         }
 
-        .subtitle {
-            text-align: center;
-            color: #666;
-            margin-bottom: 45px;
+        .reels-heading h1 {
+            font-size: 38px;
+            font-weight: 700;
+            color: #111820;
+            margin-bottom: 12px;
         }
 
-        .project-grid {
+        .reels-heading p {
+            font-size: 16px;
+            color: #666666;
+        }
+
+        /* REELS GRID */
+
+        .reels-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-            max-width: 1000px;
-            margin: auto;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 40px;
+            justify-items: center;
         }
 
-        .project-card {
-            background: white;
-            padding: 35px;
-            border: 1px solid #e0e5ed;
-            border-radius: 14px;
+        /* REEL CARD */
+
+        .reel-card {
+            width: 100%;
+            max-width: 400px;
+            padding: 22px;
+
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 15px;
+
+            text-align: center;
+
             transition: 0.3s ease;
         }
 
-        .project-card:hover {
+        .reel-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.07);
+
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
         }
 
-        .category {
-            color: #174a91;
-            font-size: 13px;
-            font-weight: bold;
-            letter-spacing: 2px;
+        /* REEL NUMBER */
+
+        .reel-day {
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            color: #243b67;
+
+            margin-bottom: 12px;
         }
 
-        .project-card h2 {
-            font-size: 25px;
-            margin: 15px 0;
-        }
+        /* REEL TITLE */
 
-        .project-card p {
-            color: #666;
-            line-height: 1.8;
-            margin-bottom: 25px;
-        }
-
-        .project-link {
-            color: #174a91;
-            text-decoration: none;
-            font-size: 16px;
+        .reel-card h2 {
+            font-size: 22px;
             font-weight: 600;
+            color: #111820;
+
+            margin-bottom: 22px;
         }
 
-        .project-link:hover {
-            color: #0b2f63;
+        /* VIDEO */
+
+        .reel-card video {
+            width: 100%;
+            aspect-ratio: 9 / 16;
+
+            object-fit: contain;
+            object-position: center;
+
+            display: block;
+
+            border-radius: 10px;
+            background: #000000;
         }
 
-        @media (max-width: 700px) {
-            .project-grid {
-                grid-template-columns: 1fr;
+        /* TABLET */
+
+        @media (max-width: 768px) {
+
+            .reels-section {
+                padding: 50px 5%;
             }
 
-            .project-page h1 {
+            .reels-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 20px;
+            }
+
+            .reel-card {
+                padding: 15px;
+            }
+
+            .reel-card h2 {
+                font-size: 18px;
+            }
+
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 550px) {
+
+            .reels-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .reel-card {
+                max-width: 350px;
+            }
+
+            .reels-heading h1 {
                 font-size: 28px;
             }
+
         }
+
     </style>
+
 </head>
 
 <body>
 
-<section class="project-page">
+    <section class="reels-section">
 
-    <a href="index.html" class="back-link">
-        ← Back to Portfolio
-    </a>
+        <!-- SECTION HEADING -->
 
-    <h1>AI Reels & Organic</h1>
+        <div class="reels-heading">
 
-    <p class="subtitle">
-        Explore AI-powered video content and organic reel strategies.
-    </p>
+            <h1>Branding Reels</h1>
 
-    <div class="project-grid">
-
-        <!-- AI Reel Card -->
-        <div class="project-card">
-
-            <span class="category">AI VIDEO CONTENT</span>
-
-            <h2>AI Reel</h2>
-
-            <p>
-                Creative AI-generated reels featuring visual storytelling,
-                engaging scripts, and innovative video concepts.
-            </p>
-
-            <a href="ai-reel.html" class="project-link">
-                View Project →
-            </a>
+            <p>Creative Stories by ArtologyPlus</p>
 
         </div>
 
-        <!-- Organic Reel Card -->
-        <div class="project-card">
 
-            <span class="category">ORGANIC CONTENT</span>
+        <div class="reels-grid">
 
-            <h2>Organic Reel</h2>
 
-            <p>
-                Organic reel concepts designed to build brand awareness,
-                connect with audiences, and improve engagement.
-            </p>
+            <!-- REEL 1 -->
 
-            <a href="organic-reel.html" class="project-link">
-                View Project →
-            </a>
+            <div class="reel-card">
+
+                <div class="reel-day">
+                    REEL 1
+                </div>
+
+                <h2>First Impression</h2>
+
+                <video controls playsinline preload="metadata">
+
+                    <source src="images/reel1.mp4" type="video/mp4">
+
+                    Your browser does not support video playback.
+
+                </video>
+
+            </div>
+
+
+            <!-- REEL 2 -->
+
+            <div class="reel-card">
+
+                <div class="reel-day">
+                    REEL 2
+                </div>
+
+                <h2>Brand Identity</h2>
+
+                <video controls playsinline preload="metadata">
+
+                    <source src="images/reel2.mp4" type="video/mp4">
+
+                    Your browser does not support video playback.
+
+                </video>
+
+            </div>
+
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 </body>
+
 </html>
