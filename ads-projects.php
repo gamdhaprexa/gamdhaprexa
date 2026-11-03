@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -107,7 +106,7 @@
 
 <section class="project-page">
 
-    <a href="index.php" class="back-link">
+    <a href="index.html" class="back-link">
         ← Back to Portfolio
     </a>
 
@@ -132,7 +131,7 @@
                 potential customers.
             </p>
 
-            <a href="google-ads.php" class="project-link">
+            <a href="google-ads.html" class="project-link">
                 View Project →
             </a>
 
@@ -151,7 +150,7 @@
                 and reach.
             </p>
 
-            <a href="meta-ads.php" class="project-link">
+            <a href="meta-ads.html" class="project-link">
                 View Project →
             </a>
 
