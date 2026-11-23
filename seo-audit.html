@@ -2,80 +2,736 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SEO Audit | Prexa Gamdha</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEO Audit Project | Prexa Gamdha</title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f8f9fc;
-            color: #111820;
-            padding: 60px 8%;
-            line-height: 1.8;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        .content {
-            max-width: 850px;
-            margin: auto;
-            background: white;
-            padding: 40px;
-            border-radius: 14px;
-            border: 1px solid #e0e5ed;
-        }
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #17202b;
+    line-height: 1.7;
+}
 
-        a {
-            color: #174a91;
-            text-decoration: none;
-            font-weight: bold;
-        }
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
 
-        h1 {
-            margin: 20px 0;
-        }
+header {
+    padding: 22px 0;
+    border-bottom: 1px solid #e5e9ef;
+}
 
-        h2 {
-            margin-top: 25px;
-        }
-    </style>
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+    color: #174a91;
+}
+
+nav a {
+    text-decoration: none;
+    color: #222;
+    margin-left: 22px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #174a91;
+}
+
+/* Hero */
+
+.hero {
+    padding: 85px 0;
+    background: #f5f8fc;
+    text-align: center;
+}
+
+.tag {
+    color: #174a91;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 15px 0;
+    color: #17202b;
+}
+
+.hero h1 span {
+    color: #174a91;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: auto;
+    color: #606b78;
+}
+
+.hero-details {
+    margin-top: 25px;
+    color: #414d5c;
+    font-size: 14px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 28px;
+    padding: 12px 28px;
+    background: #174a91;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #0b2f63;
+}
+
+/* Common Sections */
+
+section {
+    padding: 65px 0;
+}
+
+.section-title {
+    font-size: 30px;
+    color: #17202b;
+    margin-bottom: 12px;
+}
+
+.section-desc {
+    color: #6a7480;
+    margin-bottom: 30px;
+    max-width: 750px;
+}
+
+.line {
+    width: 55px;
+    height: 4px;
+    background: #174a91;
+    margin-bottom: 25px;
+}
+
+/* Overview */
+
+.overview {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 35px;
+    align-items: center;
+}
+
+.overview img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.overview p {
+    color: #626d79;
+}
+
+.overview ul {
+    padding-left: 20px;
+    margin-top: 15px;
+}
+
+/* Tools */
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.tool-card {
+    border: 1px solid #e1e6ed;
+    padding: 25px 15px;
+    border-radius: 8px;
+    text-align: center;
+    background: white;
+}
+
+.tool-card h3 {
+    color: #174a91;
+    font-size: 17px;
+}
+
+.tool-card p {
+    color: #697482;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+/* Process */
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.process-card {
+    padding: 25px;
+    border: 1px solid #e1e6ed;
+    border-radius: 8px;
+}
+
+.number {
+    color: #174a91;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.process-card h3 {
+    margin: 8px 0;
+}
+
+.process-card p {
+    color: #6a7480;
+    font-size: 14px;
+}
+
+/* Screenshots */
+
+#screenshots {
+    background: #f5f8fc;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.gallery-card {
+    background: white;
+    border: 1px solid #e1e6ed;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: contain;
+    background: #edf1f6;
+}
+
+.gallery-card h3 {
+    padding: 15px 18px 3px;
+    color: #174a91;
+}
+
+.gallery-card p {
+    padding: 0 18px 18px;
+    color: #6a7480;
+    font-size: 14px;
+}
+
+/* Table */
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+th {
+    background: #174a91;
+    color: white;
+    padding: 15px;
+    text-align: left;
+}
+
+td {
+    padding: 14px 15px;
+    border-bottom: 1px solid #e4e8ed;
+    color: #495564;
+}
+
+tr:nth-child(even) {
+    background: #f5f8fc;
+}
+
+.status {
+    color: #174a91;
+    font-weight: bold;
+}
+
+/* Recommendations */
+
+.recommend-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.recommend-card {
+    padding: 22px;
+    border-left: 4px solid #174a91;
+    background: #f5f8fc;
+    border-radius: 5px;
+}
+
+.recommend-card h3 {
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.recommend-card p {
+    color: #66717e;
+    font-size: 14px;
+}
+
+/* Report */
+
+.report {
+    background: #f5f8fc;
+    text-align: center;
+    padding: 55px 25px;
+    border-radius: 10px;
+}
+
+.report p {
+    color: #687482;
+    max-width: 600px;
+    margin: 12px auto;
+}
+
+footer {
+    background: #17202b;
+    color: white;
+    padding: 28px;
+    text-align: center;
+    margin-top: 65px;
+}
+
+footer p {
+    font-size: 14px;
+    color: #d4dce6;
+}
+
+@media(max-width: 768px) {
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .overview,
+    .tools-grid,
+    .process-grid,
+    .gallery,
+    .recommend-grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    nav a {
+        margin: 5px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-<div class="content">
+<!-- HEADER -->
 
-    <a href="seo-blog.php">← Back to SEO Projects</a>
+<header>
+<div class="container">
+<nav>
+    <div class="logo">PREXA GAMDHA</div>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#work">My Work</a>
+        <a href="index.html#contact">Contact</a>
+    </div>
+</nav>
+</div>
+</header>
 
-    <h1>SEO Audit</h1>
+<!-- PROJECT COVER -->
+
+<div class="hero">
+<div class="container">
+
+    <div class="tag">DIGITAL MARKETING PROJECT</div>
+
+    <h1>SEO <span>Audit</span> & Analysis</h1>
 
     <p>
-        This project focuses on analyzing website performance
-        and identifying SEO improvements to increase organic
-        visibility and user experience.
+        A comprehensive website SEO audit to identify
+        technical issues, evaluate on-page elements and
+        discover opportunities for better search visibility.
     </p>
 
-    <h2>Project Overview</h2>
-    <p>
-        The audit includes technical SEO checks, on-page SEO
-        analysis, keyword research, and website content review.
-    </p>
+    <div class="hero-details">
+        Project by: Prexa Gamdha |
+        Tool: Screaming Frog SEO Spider
+    </div>
 
-    <h2>Key Activities</h2>
-    <ul>
-        <li>Website SEO analysis</li>
-        <li>Keyword research</li>
-        <li>On-page SEO review</li>
-        <li>Meta title and description analysis</li>
-        <li>Technical SEO recommendations</li>
-    </ul>
-
-    <h2>Learning Outcome</h2>
-    <p>
-        Learned how to identify website SEO issues and suggest
-        improvements for better search visibility.
-    </p>
+    <a href="#overview" class="btn">Explore Project</a>
 
 </div>
+</div>
+
+<!-- PROJECT OVERVIEW -->
+
+<section id="overview">
+<div class="container">
+
+    <div class="overview">
+
+        <div>
+            <div class="tag">01 / OVERVIEW</div>
+            <h2 class="section-title">Project Overview</h2>
+            <div class="line"></div>
+
+            <p>
+                This project focuses on conducting a website
+                SEO audit using Screaming Frog SEO Spider.
+
+                The objective is to analyze website structure,
+                identify technical SEO issues and evaluate
+                important on-page SEO elements.
+            </p>
+
+            <ul>
+                <li>Website Crawling</li>
+                <li>Technical SEO Analysis</li>
+                <li>On-Page SEO Analysis</li>
+                <li>Keyword & Content Opportunities</li>
+                <li>SEO Recommendations</li>
+            </ul>
+        </div>
+
+        <div>
+            <img src="portfolio images/seo-cover.jpg"
+            alt="SEO Audit Project Cover">
+        </div>
+
+    </div>
+</div>
+</section>
+
+<!-- TOOLS USED -->
+
+<section id="tools" style="background:#f5f8fc;">
+<div class="container">
+
+    <div class="tag">02 / TECHNOLOGY</div>
+    <h2 class="section-title">Tools Used</h2>
+    <div class="line"></div>
+
+    <div class="tools-grid">
+
+        <div class="tool-card">
+            <h3>Screaming Frog</h3>
+            <p>Website Crawling & Technical SEO Audit</p>
+        </div>
+
+        <div class="tool-card">
+            <h3>Google PageSpeed</h3>
+            <p>Website Speed & Performance Analysis</p>
+        </div>
+
+        <div class="tool-card">
+            <h3>Google Search Console</h3>
+            <p>Search Visibility & Indexing Analysis</p>
+        </div>
+
+        <div class="tool-card">
+            <h3>MS Excel</h3>
+            <p>Data Analysis & Audit Reporting</p>
+        </div>
+
+    </div>
+</div>
+</section>
+
+<!-- SEO PROCESS -->
+
+<section id="process">
+<div class="container">
+
+    <div class="tag">03 / WORKFLOW</div>
+    <h2 class="section-title">SEO Audit Process</h2>
+    <div class="line"></div>
+
+    <div class="process-grid">
+
+        <div class="process-card">
+            <div class="number">01</div>
+            <h3>Website Crawling</h3>
+            <p>Scanned website URLs using Screaming Frog.</p>
+        </div>
+
+        <div class="process-card">
+            <div class="number">02</div>
+            <h3>Page Title Analysis</h3>
+            <p>Checked missing and duplicate page titles.</p>
+        </div>
+
+        <div class="process-card">
+            <div class="number">03</div>
+            <h3>Meta Description</h3>
+            <p>Analyzed meta descriptions across website pages.</p>
+        </div>
+
+        <div class="process-card">
+            <div class="number">04</div>
+            <h3>Heading Analysis</h3>
+            <p>Evaluated H1 and H2 heading structures.</p>
+        </div>
+
+        <div class="process-card">
+            <div class="number">05</div>
+            <h3>Image Analysis</h3>
+            <p>Checked images for missing alternative text.</p>
+        </div>
+
+        <div class="process-card">
+            <div class="number">06</div>
+            <h3>Technical Analysis</h3>
+            <p>Reviewed response codes and broken links.</p>
+        </div>
+
+    </div>
+</div>
+</section>
+
+<!-- SCREENSHOTS -->
+
+<section id="screenshots">
+<div class="container">
+
+    <div class="tag">04 / PRACTICAL WORK</div>
+    <h2 class="section-title">Audit Screenshots</h2>
+    <div class="line"></div>
+
+    <p class="section-desc">
+        Screenshots of the practical SEO audit
+        performed using Screaming Frog SEO Spider.
+    </p>
+
+    <div class="gallery">
+
+        <div class="gallery-card">
+            <img src="portfolio images/seo-crawl.png"
+            alt="Website Crawl Report">
+            <h3>Website Crawl</h3>
+            <p>Website crawling and URL analysis.</p>
+        </div>
+
+        <div class="gallery-card">
+            <img src="portfolio images/seo-title.png"
+            alt="Page Title Analysis">
+            <h3>Page Title Analysis</h3>
+            <p>Missing and duplicate title analysis.</p>
+        </div>
+
+        <div class="gallery-card">
+            <img src="portfolio images/seo-meta.png"
+            alt="Meta Description Analysis">
+            <h3>Meta Description Analysis</h3>
+            <p>Reviewed missing meta descriptions.</p>
+        </div>
+
+        <div class="gallery-card">
+            <img src="portfolio images/seo-h1.png"
+            alt="Heading Analysis">
+            <h3>Heading Analysis</h3>
+            <p>H1 and H2 structure evaluation.</p>
+        </div>
+
+        <div class="gallery-card">
+            <img src="portfolio images/seo-images.png"
+            alt="Image SEO Analysis">
+            <h3>Image SEO Analysis</h3>
+            <p>Checked image alt attributes.</p>
+        </div>
+
+        <div class="gallery-card">
+            <img src="portfolio images/seo-errors.png"
+            alt="Broken Links Analysis">
+            <h3>Response Code Analysis</h3>
+            <p>Reviewed client errors and redirects.</p>
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+<!-- ISSUES IDENTIFIED -->
+
+<section id="issues">
+<div class="container">
+
+    <div class="tag">05 / FINDINGS</div>
+    <h2 class="section-title">Issues Identified</h2>
+    <div class="line"></div>
+
+    <p class="section-desc">
+        The following SEO elements were reviewed
+        during the website audit. Update the status
+        according to your actual crawl results.
+    </p>
+
+    <div class="table-wrap">
+    <table>
+
+        <tr>
+            <th>SEO Element</th>
+            <th>Issue Checked</th>
+            <th>Audit Status</th>
+        </tr>
+
+        <tr>
+            <td>Page Titles</td>
+            <td>Missing / Duplicate Titles</td>
+            <td class="status">To Verify</td>
+        </tr>
+
+        <tr>
+            <td>Meta Description</td>
+            <td>Missing Descriptions</td>
+            <td class="status">To Verify</td>
+        </tr>
+
+        <tr>
+            <td>H1 Headings</td>
+            <td>Missing H1 Tags</td>
+            <td class="status">To Verify</td>
+        </tr>
+
+        <tr>
+            <td>Images</td>
+            <td>Missing Alt Text</td>
+            <td class="status">To Verify</td>
+        </tr>
+
+        <tr>
+            <td>Broken Links</td>
+            <td>4xx Response Codes</td>
+            <td class="status">To Verify</td>
+        </tr>
+
+    </table>
+    </div>
+
+</div>
+</section>
+
+<!-- RECOMMENDATIONS -->
+
+<section id="recommendations" style="background:#f5f8fc;">
+<div class="container">
+
+    <div class="tag">06 / IMPROVEMENTS</div>
+    <h2 class="section-title">SEO Recommendations</h2>
+    <div class="line"></div>
+
+    <div class="recommend-grid">
+
+        <div class="recommend-card">
+            <h3>Optimize Page Titles</h3>
+            <p>Create unique and descriptive titles for important pages.</p>
+        </div>
+
+        <div class="recommend-card">
+            <h3>Improve Meta Descriptions</h3>
+            <p>Write relevant meta descriptions for better search result presentation.</p>
+        </div>
+
+        <div class="recommend-card">
+            <h3>Improve Heading Structure</h3>
+            <p>Use meaningful H1 and H2 headings to organize content.</p>
+        </div>
+
+        <div class="recommend-card">
+            <h3>Optimize Images</h3>
+            <p>Add descriptive alt text to informative images.</p>
+        </div>
+
+        <div class="recommend-card">
+            <h3>Fix Broken Links</h3>
+            <p>Identify broken URLs and update or redirect them appropriately.</p>
+        </div>
+
+        <div class="recommend-card">
+            <h3>Improve Technical SEO</h3>
+            <p>Review indexability, canonical tags and website structure.</p>
+        </div>
+
+    </div>
+</div>
+</section>
+
+<!-- FINAL REPORT -->
+
+<section id="report">
+<div class="container">
+
+    <div class="report">
+
+        <div class="tag">07 / FINAL DOCUMENTATION</div>
+
+        <h2 class="section-title">SEO Audit Report</h2>
+
+        <p>
+            Explore the detailed SEO audit report
+            including website analysis, audit findings
+            and optimization recommendations.
+        </p>
+
+        <a href="portfolio images/seo-audit-report.pdf"
+        class="btn" target="_blank">
+            View PDF Report
+        </a>
+
+        <a href="portfolio images/seo-audit-report.pdf"
+        class="btn" download>
+            Download Report
+        </a>
+
+    </div>
+</div>
+</section>
+
+<footer>
+    <p>© 2026 Prexa Gamdha | Digital Marketing Portfolio</p>
+    <p>SEO Audit Project</p>
+</footer>
 
 </body>
 </html>
