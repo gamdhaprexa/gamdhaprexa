@@ -1,102 +1,448 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Affiliate Marketing | Prexa Gamdha</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Affiliate Marketing | Portfolio</title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f8f9fc;
-            color: #111820;
-            padding: 60px 8%;
-            line-height: 1.8;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        .content {
-            max-width: 900px;
-            margin: auto;
-            background: white;
-            padding: 40px;
-            border: 1px solid #e0e5ed;
-            border-radius: 14px;
-        }
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #172b4d;
+}
 
-        .category {
-            color: #174a91;
-            font-size: 13px;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
+section {
+    padding: 65px 8%;
+}
 
-        h1 {
-            font-size: 32px;
-            margin: 15px 0;
-        }
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 12px;
+    color: #102747;
+}
 
-        h2 {
-            margin-top: 25px;
-        }
+.section-desc {
+    text-align: center;
+    color: #667085;
+    font-size: 15px;
+    line-height: 1.7;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
 
-        p {
-            color: #666;
-        }
+/* HERO BANNER */
+.hero {
+    background: linear-gradient(120deg, #102747, #244d7b);
+    color: white;
+    padding: 90px 8%;
+    text-align: center;
+}
 
-        a {
-            color: #174a91;
-            text-decoration: none;
-            font-weight: 600;
-        }
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 18px;
+}
 
-        ul {
-            padding-left: 25px;
-        }
-    </style>
+.hero p {
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 750px;
+    margin: auto;
+    color: #e1e9f3;
+}
+
+/* OVERVIEW */
+.overview {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.overview img {
+    width: 48%;
+    height: 310px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.overview-content {
+    flex: 1;
+}
+
+.overview-content h2 {
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+
+.overview-content p {
+    color: #667085;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+/* MY WORK */
+.work-section {
+    background: #f5f8fc;
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.work-card {
+    background: white;
+    border: 1px solid #e1e7ef;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.work-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 22px rgba(16,39,71,0.10);
+}
+
+.work-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.work-card-content {
+    padding: 23px;
+}
+
+.work-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #102747;
+}
+
+.work-card p {
+    color: #667085;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+/* TOOLS */
+.tools-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.tool {
+    background: #f3f6fa;
+    border: 1px solid #e0e7f0;
+    border-radius: 9px;
+    padding: 18px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #173c68;
+}
+
+/* SCREENSHOTS */
+.screenshots {
+    background: #f5f8fc;
+}
+
+.screenshot-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    max-width: 950px;
+    margin: auto;
+}
+
+.screenshot-card {
+    background: white;
+    border: 1px solid #e0e7ef;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.screenshot-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.screenshot-card h3 {
+    padding: 16px;
+    font-size: 17px;
+    text-align: center;
+}
+
+/* LEARNING */
+.learning-box {
+    max-width: 850px;
+    margin: auto;
+    background: #f5f8fc;
+    border-left: 5px solid #173c68;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.learning-box ul {
+    list-style: none;
+}
+
+.learning-box li {
+    padding: 12px 5px;
+    color: #475467;
+    border-bottom: 1px solid #e1e7ef;
+    font-size: 15px;
+}
+
+.learning-box li:last-child {
+    border-bottom: none;
+}
+
+.learning-box li::before {
+    content: "✓";
+    color: #173c68;
+    font-weight: bold;
+    margin-right: 12px;
+}
+
+/* FOOTER */
+.footer {
+    background: #102747;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media(max-width: 700px) {
+    section {
+        padding: 45px 5%;
+    }
+
+    .hero {
+        padding: 65px 5%;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .overview {
+        flex-direction: column;
+    }
+
+    .overview img {
+        width: 100%;
+        height: 240px;
+    }
+
+    .work-grid,
+    .screenshot-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-<div class="content">
-
-    <a href="index.html">← Back to Portfolio</a>
-
-    <br><br>
-
-    <span class="category">AFFILIATE MARKETING</span>
-
+<!-- HERO BANNER -->
+<div class="hero">
     <h1>Affiliate Marketing</h1>
-
     <p>
-        Exploring product promotion, content strategy,
-        and affiliate marketing concepts.
+        Exploring affiliate marketing through product research,
+        e-commerce store setup, product listings, and promotional strategies.
+    </p>
+</div>
+
+<!-- PROJECT OVERVIEW -->
+<section>
+    <div class="overview">
+
+        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=900"
+        alt="E-commerce Store">
+
+        <div class="overview-content">
+            <h2>TechZone Store – Demo E-commerce Project</h2>
+
+            <p>
+                Created a demo technology store to understand product
+                presentation, online product listings, and affiliate
+                marketing concepts. This project helped me explore
+                how products are organized and presented in an online store.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- MY WORK -->
+<section class="work-section">
+
+    <h2 class="section-title">My Work</h2>
+
+    <p class="section-desc">
+        Practical activities and skills explored during my
+        affiliate marketing learning journey.
     </p>
 
-    <h2>Project Overview</h2>
+    <div class="work-grid">
 
-    <p>
-        This project focuses on understanding affiliate marketing
-        and how products or services can be promoted through
-        content and relevant online platforms.
+        <div class="work-card">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700"
+            alt="Product Research">
+
+            <div class="work-card-content">
+                <h3>Product Research</h3>
+                <p>
+                    Researched technology products, product features,
+                    pricing, and market information.
+                </p>
+            </div>
+        </div>
+
+        <div class="work-card">
+            <img src="https://images.unsplash.com/photo-1556742111-a301076d9d18?w=700"
+            alt="Store Setup">
+
+            <div class="work-card-content">
+                <h3>Store Setup</h3>
+                <p>
+                    Created TechZone Store using Google Sites
+                    with product categories and featured products.
+                </p>
+            </div>
+        </div>
+
+        <div class="work-card">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=700"
+            alt="Product Listing">
+
+            <div class="work-card-content">
+                <h3>Product Listing</h3>
+                <p>
+                    Practiced adding product information,
+                    images, pricing, and availability in
+                    Google Merchant Center.
+                </p>
+            </div>
+        </div>
+
+        <div class="work-card">
+            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=700"
+            alt="Marketing Strategy">
+
+            <div class="work-card-content">
+                <h3>Marketing Strategy</h3>
+                <p>
+                    Explored product promotion methods
+                    and affiliate marketing strategies.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- TOOLS USED -->
+<section>
+
+    <h2 class="section-title">Tools Used</h2>
+
+    <p class="section-desc">
+        Platforms and tools explored during this project.
     </p>
 
-    <h2>Key Activities</h2>
+    <div class="tools-grid">
+        <div class="tool">Google Sites</div>
+        <div class="tool">Google Merchant Center</div>
+        <div class="tool">Google Search</div>
+        <div class="tool">Canva</div>
+    </div>
 
-    <ul>
-        <li>Affiliate marketing research</li>
-        <li>Product and niche selection</li>
-        <li>Content promotion strategies</li>
-        <li>Affiliate network exploration</li>
-        <li>Audience-focused product promotion</li>
-    </ul>
+</section>
 
-    <h2>Learning Outcome</h2>
+<!-- PROJECT SCREENSHOTS -->
+<section class="screenshots">
 
-    <p>
-        Learned how affiliate marketing works and how relevant
-        content can support product discovery and promotion.
+    <h2 class="section-title">Project Screenshots</h2>
+
+    <p class="section-desc">
+        A look at my practical work and project activities.
     </p>
 
+    <div class="screenshot-grid">
+
+        <div class="screenshot-card">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=700"
+            alt="TechZone Store Home Page">
+            <h3>TechZone Store – Home Page</h3>
+        </div>
+
+        <div class="screenshot-card">
+            <img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?w=700"
+            alt="Product Categories">
+            <h3>Categories & Featured Products</h3>
+        </div>
+
+        <div class="screenshot-card">
+            <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=700"
+            alt="Merchant Center">
+            <h3>Merchant Center – Product Details</h3>
+        </div>
+
+        <div class="screenshot-card">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700"
+            alt="Product Listing">
+            <h3>Product Listing & Management</h3>
+        </div>
+
+    </div>
+</section>
+
+<!-- WHAT I LEARNED -->
+<section>
+
+    <h2 class="section-title">What I Learned</h2>
+
+    <p class="section-desc">
+        Key skills and knowledge gained through this practical project.
+    </p>
+
+    <div class="learning-box">
+        <ul>
+            <li>Product Research</li>
+            <li>E-commerce Store Setup</li>
+            <li>Product Listing Management</li>
+            <li>Google Merchant Center Basics</li>
+            <li>Affiliate Marketing Concepts</li>
+        </ul>
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<div class="footer">
+    © 2026 TechZone Store | Affiliate Marketing Demo Project
 </div>
 
 </body>
