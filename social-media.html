@@ -148,6 +148,78 @@
             color: #666666;
         }
 
+        /* CAROUSEL */
+
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel-images {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .carousel-slide {
+            display: none !important;
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            object-fit: contain;
+            object-position: center;
+            border-radius: 8px;
+        }
+
+        .carousel-slide.active {
+            display: block !important;
+        }
+
+        /* CAROUSEL ARROWS */
+
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+
+            width: 38px;
+            height: 38px;
+
+            border: none;
+            border-radius: 50%;
+
+            background: #243b67;
+            color: #ffffff;
+
+            font-size: 18px;
+            cursor: pointer;
+
+            z-index: 5;
+            transition: 0.3s ease;
+        }
+
+        .carousel-arrow:hover {
+            background: #111820;
+        }
+
+        .carousel-arrow.left {
+            left: 8px;
+        }
+
+        .carousel-arrow.right {
+            right: 8px;
+        }
+
+        /* SLIDE COUNT */
+
+        .slide-count {
+            margin-top: 15px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #243b67;
+        }
+
         /* TABLET */
 
         @media (max-width: 992px) {
@@ -198,6 +270,12 @@
 
             .live-work-heading h2 {
                 font-size: 25px;
+            }
+
+            .carousel-arrow {
+                width: 34px;
+                height: 34px;
+                font-size: 16px;
             }
 
         }
@@ -352,43 +430,75 @@
             </div>
 
 
-<!-- CAROUSEL POST -->
+            <!-- CAROUSEL POST -->
 
-<div class="social-card">
+            <div class="social-card">
 
-    <div class="day">CAROUSEL POST</div>
+                <div class="day">CAROUSEL POST</div>
 
-    <h2>Digital Marketing Explained</h2>
+                <h2>Digital Marketing Explained</h2>
 
-    <div class="carousel-container">
+                <div class="carousel-container">
 
-        <button class="carousel-arrow left" onclick="changeSlide(-1)">
-            &#10094;
-        </button>
+                    <button type="button"
+                            class="carousel-arrow left"
+                            onclick="changeSlide(-1)">
+                        &#10094;
+                    </button>
 
-        <div class="carousel-images">
+                    <div class="carousel-images">
 
-            <img src="carousel1.png" class="carousel-slide active" alt="Slide 1">
-            <img src="carousel2.png" class="carousel-slide" alt="Slide 2">
-            <img src="carousel3.png" class="carousel-slide" alt="Slide 3">
-            <img src="carousel4.png" class="carousel-slide" alt="Slide 4">
-            <img src="carousel5.png" class="carousel-slide" alt="Slide 5">
-            <img src="carousel6.png" class="carousel-slide" alt="Slide 6">
-            <img src="carousel7.png" class="carousel-slide" alt="Slide 7">
-            <img src="carousel8.png" class="carousel-slide" alt="Slide 8">
-            <img src="carousel9.png" class="carousel-slide" alt="Slide 9">
+                        <img src="carousel1.png"
+                             class="carousel-slide active"
+                             alt="Slide 1">
 
-        </div>
+                        <img src="carousel2.png"
+                             class="carousel-slide"
+                             alt="Slide 2">
 
-        <button class="carousel-arrow right" onclick="changeSlide(1)">
-            &#10095;
-        </button>
+                        <img src="carousel3.png"
+                             class="carousel-slide"
+                             alt="Slide 3">
 
-    </div>
+                        <img src="carousel4.png"
+                             class="carousel-slide"
+                             alt="Slide 4">
 
-    <div class="slide-count" id="slide-count">1 / 9</div>
+                        <img src="carousel5.png"
+                             class="carousel-slide"
+                             alt="Slide 5">
 
-</div>
+                        <img src="carousel6.png"
+                             class="carousel-slide"
+                             alt="Slide 6">
+
+                        <img src="carousel7.png"
+                             class="carousel-slide"
+                             alt="Slide 7">
+
+                        <img src="carousel8.png"
+                             class="carousel-slide"
+                             alt="Slide 8">
+
+                        <img src="carousel9.png"
+                             class="carousel-slide"
+                             alt="Slide 9">
+
+                    </div>
+
+                    <button type="button"
+                            class="carousel-arrow right"
+                            onclick="changeSlide(1)">
+                        &#10095;
+                    </button>
+
+                </div>
+
+                <div class="slide-count" id="slide-count">
+                    1 / 9
+                </div>
+
+            </div>
 
 
             <!-- SINGLE POST 2 -->
@@ -407,6 +517,30 @@
         </div>
 
     </section>
+
+
+    <!-- CAROUSEL JAVASCRIPT -->
+
+    <script>
+
+        let currentSlide = 0;
+
+        const slides = document.querySelectorAll(".carousel-slide");
+
+        function changeSlide(direction) {
+
+            slides[currentSlide].classList.remove("active");
+
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+
+            slides[currentSlide].classList.add("active");
+
+            document.getElementById("slide-count").textContent =
+                (currentSlide + 1) + " / " + slides.length;
+
+        }
+
+    </script>
 
 </body>
 
