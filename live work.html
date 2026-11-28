@@ -1,0 +1,976 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Live Client Work | Prexa Gamdha</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #ffffff;
+    color: #111820;
+}
+
+:root {
+    --blue: #244a91;
+    --dark: #111820;
+    --grey: #737373;
+    --light: #f5f7fb;
+}
+
+.container {
+    width: 86%;
+    max-width: 1250px;
+    margin: auto;
+}
+
+/* NAVBAR */
+
+header {
+    background: #ffffff;
+    border-bottom: 1px solid #e1e6ef;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1400px;
+    margin: auto;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111820;
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--blue);
+}
+
+.back-btn {
+    text-decoration: none;
+    color: var(--blue);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.back-btn i {
+    margin-right: 8px;
+}
+
+/* HERO */
+
+.hero {
+    background: #f5f7fb;
+    padding: 75px 7%;
+    text-align: center;
+}
+
+.hero-label {
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: var(--blue);
+}
+
+.hero p {
+    color: var(--grey);
+    font-size: 14px;
+    line-height: 1.9;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* COMMON SECTION */
+
+.work-section {
+    padding: 75px 0;
+}
+
+.section-heading {
+    margin-bottom: 35px;
+}
+
+.section-label {
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    margin-bottom: 10px;
+}
+
+.section-heading h2 {
+    font-size: 29px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.section-heading h2 span {
+    color: var(--blue);
+}
+
+.section-heading p {
+    color: var(--grey);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* IMAGE GRID */
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.image-card {
+    background: #ffffff;
+    border: 1px solid #e1e6ef;
+    border-radius: 9px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.image-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    border-color: var(--blue);
+}
+
+.image-card img {
+    width: 100%;
+    height: 320px;
+    object-fit: contain;
+    display: block;
+    background: #f5f7fb;
+}
+
+.card-info {
+    padding: 17px 20px;
+}
+
+.card-info h3 {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.card-info p {
+    color: var(--grey);
+    font-size: 12px;
+    margin-top: 6px;
+    line-height: 1.7;
+}
+
+/* REELS */
+
+.reel-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 750px;
+}
+
+.reel-card {
+    border: 1px solid #e1e6ef;
+    border-radius: 9px;
+    overflow: hidden;
+    background: white;
+    transition: 0.3s;
+}
+
+.reel-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--blue);
+}
+
+.reel-card video {
+    width: 100%;
+    height: 450px;
+    object-fit: contain;
+    background: #f5f7fb;
+    display: block;
+}
+
+.reel-card h3 {
+    padding: 16px;
+    font-size: 15px;
+}
+
+/* SCREENSHOT GRID */
+
+.screenshot-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.screenshot-card {
+    background: #ffffff;
+    border: 1px solid #e1e6ef;
+    border-radius: 9px;
+    padding: 12px;
+    transition: 0.3s;
+}
+
+.screenshot-card:hover {
+    border-color: var(--blue);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+}
+
+.screenshot-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+    background: #f5f7fb;
+    display: block;
+    border-radius: 5px;
+}
+
+.screenshot-card p {
+    padding: 12px 5px 5px;
+    font-size: 13px;
+    color: #555;
+}
+
+/* DESCRIPTION */
+
+.project-description {
+    background: #f5f7fb;
+    border-left: 4px solid var(--blue);
+    padding: 25px;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.project-description h3 {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.project-description p {
+    color: #626262;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+/* BLOGS */
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.blog-card {
+    border: 1px solid #e1e6ef;
+    border-radius: 9px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--blue);
+}
+
+.blog-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+.blog-content {
+    padding: 20px;
+}
+
+.blog-content h3 {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.blog-content p {
+    color: var(--grey);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* SEPARATOR */
+
+.section-divider {
+    width: 100%;
+    height: 1px;
+    background: #e8ebf0;
+}
+
+/* FOOTER */
+
+footer {
+    background: #f5f7fb;
+    text-align: center;
+    padding: 25px;
+}
+
+footer p {
+    color: #777;
+    font-size: 12px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 900px) {
+
+    .image-grid,
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media(max-width: 600px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .navbar {
+        padding: 18px 5%;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero {
+        padding: 55px 5%;
+    }
+
+    .section-heading h2 {
+        font-size: 24px;
+    }
+
+    .image-grid,
+    .blog-grid,
+    .screenshot-grid,
+    .reel-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reel-card video {
+        height: 400px;
+    }
+
+    .work-section {
+        padding: 55px 0;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header>
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+            Prexa<span>.</span>
+        </a>
+
+        <a href="index.html#work" class="back-btn">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back to Portfolio
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <p class="hero-label">REAL-WORLD PROJECTS</p>
+
+    <h1>Live <span>Client Work</span></h1>
+
+    <p>
+        A collection of practical digital marketing projects,
+        creative content, SEO activities, advertising campaigns,
+        and analytics work completed through real-world experience.
+    </p>
+
+</section>
+
+
+<!-- 01 STATIC POSTS -->
+
+<section class="work-section">
+
+<div class="container">
+
+    <div class="section-heading">
+
+        <p class="section-label">01 / SOCIAL MEDIA DESIGN</p>
+
+        <h2>Static <span>Posts</span></h2>
+
+        <p>
+            Creative social media designs developed to communicate
+            brand messages and build a consistent visual identity.
+        </p>
+
+    </div>
+
+    <div class="image-grid">
+
+        <div class="image-card">
+            <img src="live-client-work/static-post-1.png"
+                 alt="Static Social Media Post">
+            <div class="card-info">
+                <h3>Static Post 01</h3>
+                <p>Social Media Creative Design</p>
+            </div>
+        </div>
+
+        <div class="image-card">
+            <img src="live-client-work/static-post-2.png"
+                 alt="Static Social Media Post">
+            <div class="card-info">
+                <h3>Static Post 02</h3>
+                <p>Brand Communication Design</p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<div class="section-divider"></div>
+
+
+<!-- 02 CAROUSEL POSTS -->
+
+<section class="work-section">
+
+<div class="container">
+
+    <div class="section-heading">
+
+        <p class="section-label">02 / CONTENT STRATEGY</p>
+
+        <h2>Carousel <span>Posts</span></h2>
+
+        <p>
+            Multi-slide carousel content designed to share useful
+            information, maintain audience interest, and present
+            brand messages in an engaging format.
+        </p>
+
+    </div>
+
+    <div class="image-grid">
+
+        <div class="image-card">
+            <img src="live-client-work/carousel-post-1.png"
+                 alt="First Carousel Post">
+            <div class="card-info">
+                <h3>Carousel Post 01</h3>
+                <p>Informative Social Media Content</p>
+            </div>
+        </div>
+
+        <div class="image-card">
+            <img src="live-client-work/carousel-post-2.png"
+                 alt="Second Carousel Post">
+            <div class="card-info">
+                <h3>Carousel Post 02</h3>
+                <p>Creative Multi-Slide Content</p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<div class="section-divider"></div>
+
+
+<!-- 03 AI REELS -->
+
+<section class="work-section">
+
+<div class="container">
+
+    <div class="section-heading">
+
+        <p class="section-label">03 / VIDEO MARKETING</p>
+
+        <h2>AI <span>Reels</span></h2>
+
+        <p>
+            Short-form video content created using AI tools,
+            focusing on visual storytelling, brand awareness,
+            and audience engagement.
+        </p>
+
+    </div>
+
+    <div class="reel-grid">
+
+        <div class="reel-card">
+
+            <video controls preload="metadata">
+                <source src="live-client-work/ai-reel-1.mp4"
+                        type="video/mp4">
+            </video>
+
+            <h3>AI Reel 01</h3>
+
+        </div>
+
+        <div class="reel-card">
+
+            <video controls preload="metadata">
+                <source src="live-client-work/ai-reel-2.mp4"
+                        type="video/mp4">
+            </video>
+
+            <h3>AI Reel 02</h3>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<div class="section-divider"></div>
+
+
+<!-- 04 SEO AUDIT -->
+
+<section class="work-section">
+
+<div class="container">
+
+    <div class="section-heading">
+
+        <p class="section-label">04 / SEARCH ENGINE OPTIMIZATION</p>
+
+        <h2>SEO <span>Audit</span></h2>
+
+        <p>
+            Website analysis and SEO audit activities focused on
+            identifying optimization opportunities and improving
+            website search engine performance.
+        </p>
+
+    </div>
+
+    <div class="screenshot-grid">
+
+        <div class="screenshot-card">
+
+            <img src="live-client-work/seo-audit-1.png"
+                 alt="SEO Audit Screenshot">
+
+            <p>SEO Audit Report 01</p>
+
+        </div>
+
+        <div class="screenshot-card">
+
+            <img src="live-client-work/seo-audit-2.png"
+                 alt="SEO Audit Screenshot">
+
+            <p>SEO Audit Report 02</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<div class="section-divider"></div>
+
+
+<!-- 05 KEYWORD RESEARCH -->
+
+<section class="work-section">
+
+<div class="container">
+
+    <div class="section-heading">
+
+        <p class="section-label">05 / KEYWORD STRATEGY</p>
+
+        <h2>Keyword <span>Research</span></h2>
+
+        <p>
+            Keyword research conducted to identify relevant search
+            terms, understand search intent, and discover content
+            opportunities for better organic visibility.
+        </p>
+
+    </div>
+
+    <div class="screenshot-grid">
+
+        <div class="screenshot-card">
+
+            <img src="live-client-work/keyword-research-1.png"
+                 alt="Keyword Research Screenshot">
+
+            <p>Keyword Research Report 01</p>
+
+        </div>
+
+        <div class="screenshot-card">
+
+            <img src="live-client-work/keyword-research-2.png"
+                 alt="Keyword Research Screenshot">
+
+            <p>Keyword Research Report 02</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<div class="section-divider"></div>
+
+
+<!-- 06 BLOGS -->
+
+<section class="work-section">
+
+<div class="container">
+
+    <div class="section-heading">
+
+        <p class="section-label">06 / CONTENT MARKETING</p>
+
+        <h2>Blog <span>Writing</span></h2>
+
+        <p>
+            SEO-friendly blog content created with a focus on
+            relevant topics, useful information, keyword placement,
+            and engaging writing.
+        </p>
+
+    </div>
+
+    <div class="blog-grid">
+
+        <div class="blog-card">
+
+            <img src="live-client-work/blog-1.png"
+                 alt="Blog One">
+
+            <div class="blog-content">
+
+                <h3>Blog 01</h3>
+
+                <p>
+                    Informative blog content created to provide
+                    valuable insights and improve organic content visibility.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="blog-card">
+
+            <img src="live-client-work/blog-2.png"
+                 alt="Blog Two">
+
+            <div class="blog-content">
+
+                <h3>Blog 02</h3>
+
+                <p>
+                    SEO-focused content developed using relevant
+                    keywords and a reader-friendly structure.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="blog-card">
+
+            <img src="live-client-work/blog-3.png"
+                 alt="Blog Three">
+
+            <div class="blog-content">
+
+                <h3>Blog 03</h3>
+
+                <p>
+                    Creative and informative content designed
+                    to communicate useful ideas to the target audience.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<div class="section-divider"></div>
+
+
+<!-- 07 GOOGLE ADS -->
+
+<section class="work-section">
+
+<div class="container">
+
+    <div class="section-heading">
+
+        <p class="section-label">07 / PAID ADVERTISING</p>
+
+        <h2>Google <span>Ads</span></h2>
+
+        <p>
+            Google Ads campaign activities and advertising
+            performance analysis.
+        </p>
+
+    </div>
+
+    <div class="screenshot-grid">
+
+        <div class="screenshot-card">
+
+            <img src="live-client-work/google-ads-1.png"
+                 alt="Google Ads Screenshot">
+
+            <p>Google Ads Campaign Screenshot 01</p>
+
+        </div>
+
+        <div class="screenshot-card">
+
+            <img src="live-client-work/google-ads-2.png"
+                 alt="Google Ads Screenshot">
+
+            <p>Google Ads Campaign Screenshot 02</p>
+
+        </div>
+
+    </div>
+
+    <div class="project-description">
+
+        <h3>Campaign Overview</h3>
+
+        <p>
+            Worked on understanding Google Ads campaign structure,
+            keyword targeting, audience selection, and campaign
+            performance metrics. Explored how search advertising
+            helps businesses reach relevant audiences and generate
+            potential leads through targeted campaigns.
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+<div class="section-divider"></div>
+
+
+<!-- 08 META ADS -->
+
+<section class="work-section">
+
+<div class="container">
+
+    <div class="section-heading">
+
+        <p class="section-label">08 / SOCIAL MEDIA ADVERTISING</p>
+
+        <h2>Meta <span>Ads</span></h2>
+
+        <p>
+            Facebook and Instagram advertising campaign activities
+            focused on audience targeting and campaign performance.
+        </p>
+
+    </div>
+
+    <div class="screenshot-grid">
+
+        <div class="screenshot-card">
+
+            <img src="live-client-work/meta-ads-1.png"
+                 alt="Meta Ads Screenshot">
+
+            <p>Meta Ads Screenshot 01</p>
+
+        </div>
+
+        <div class="screenshot-card">
+
+            <img src="live-client-work/meta-ads-2.png"
+                 alt="Meta Ads Screenshot">
+
+            <p>Meta Ads Screenshot 02</p>
+
+        </div>
+
+    </div>
+
+    <div class="project-description">
+
+        <h3>Campaign Overview</h3>
+
+        <p>
+            Explored Meta Ads campaign setup, audience targeting,
+            ad creatives, and campaign objectives. Learned how
+            Facebook and Instagram advertising can help businesses
+            connect with their target audience, improve brand
+            awareness, and support lead generation goals.
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+<div class="section-divider"></div>
+
+
+<!-- 09 GOOGLE ANALYTICS -->
+
+<section class="work-section">
+
+<div class="container">
+
+    <div class="section-heading">
+
+        <p class="section-label">09 / DATA & PERFORMANCE ANALYSIS</p>
+
+        <h2>Google <span>Analytics</span></h2>
+
+        <p>
+            Website traffic analysis and user behaviour insights
+            using Google Analytics 4.
+        </p>
+
+    </div>
+
+    <div class="screenshot-grid">
+
+        <div class="screenshot-card">
+
+            <img src="live-client-work/analytics-1.png"
+                 alt="Google Analytics Screenshot">
+
+            <p>GA4 Traffic Overview</p>
+
+        </div>
+
+        <div class="screenshot-card">
+
+            <img src="live-client-work/analytics-2.png"
+                 alt="Google Analytics Screenshot">
+
+            <p>GA4 User Behaviour Report</p>
+
+        </div>
+
+    </div>
+
+    <div class="project-description">
+
+        <h3>Analytics Overview</h3>
+
+        <p>
+            Worked on understanding Google Analytics 4 reports,
+            website traffic sources, user behaviour, engagement,
+            and performance measurement. Explored how analytics
+            data helps understand website visitors and evaluate
+            digital marketing performance.
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 Prexa Gamdha | Live Client Work
+    </p>
+
+</footer>
+
+</body>
+</html>
